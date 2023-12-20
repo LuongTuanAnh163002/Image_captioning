@@ -4,15 +4,12 @@
 
 # Download/unzip dataset
 d='./' # unzip directory
-file_id='1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy' # ID file
-url="https://drive.google.com/uc?export=download&id=$file_id"
-filename='flickr8k.zip'
 gdown 1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy
 
 echo 'Unzipping' $filename '...'
-unzip -q $filename -d $d
+unzip -q flickr8k.zip -d $d
 
 echo 'Removing' $filename '...'
-rm $filename
+rm flickr8k.zip
 
 echo 'Download complete!'
