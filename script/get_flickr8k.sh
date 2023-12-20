@@ -7,7 +7,7 @@ d='./' # unzip directory
 file_id='1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy' # ID file
 url="https://drive.google.com/uc?export=download&id=$file_id"
 filename='flickr8k.zip'
-gdown $file_id
+gdown 1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy
 
 echo 'Unzipping' $filename '...'
 unzip -q $filename -d $d
