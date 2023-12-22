@@ -137,3 +137,4 @@
 
 <ul dir="auto">
 <li><a href="https://github.com/WongKinYiu/yolov7.git">https://github.com/WongKinYiu/yolov7.git</a></li>
+<li><a href="https://viblo.asia/p/attention-trong-seq2seq-model-m68Z0J4z5kG">https://viblo.asia/p/attention-trong-seq2seq-model-m68Z0J4z5kG</a></li>
