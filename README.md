@@ -90,10 +90,7 @@
   <p>After you run and done training, all results save in runs/train/exp/..., folder runs automatic create after training done:</p>
 
   <h3>2.For detect with your model</h3>
-  <pre>
-  #for file/image
-  python detect.py --source file_name.jpg --weight runs/train/exp
-  </pre>
+  <pre>python detect.py --source file_name.jpg --weight runs/train/exp</pre>
 
   <h3>2.For detect with my model</h3>
   <p>+Step1: Dowload my model with script below or you can dowload here</p>
@@ -113,13 +110,9 @@
   del weight_image_captioning.zip
   </pre>
   <p>+Step2: Dowload image example</p>
-  <pre>
-  gdown 1PWU1tw53Rv3J-T9i0OQBGFKLbMF4rg9J
-  </pre>
+  <pre>gdown 1PWU1tw53Rv3J-T9i0OQBGFKLbMF4rg9J</pre>
   <p>+Step3: Detect</p>
-  <pre>
-  python detect.py --source test_predict.jpg --weight weight_img_caption/exp
-  </pre>
+  <pre>python detect.py --source test_predict.jpg --weight weight_img_caption/exp</pre>
   
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#colab">Try with google colab<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
 <h3>1.For training and detect in Flickrk dataset</h3>
