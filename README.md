@@ -99,13 +99,28 @@
   <p>+Step1: Dowload my model with script below or you can dowload here</p>
   <a href="https://drive.google.com/file/d/15awWEiar47LKqHn9D4A5B_keWuxZlGTM/view?usp=sharing"><code>weight.zip</code></a>
   <pre>
+  #for ubuntu/linux
   gdown 15awWEiar47LKqHn9D4A5B_keWuxZlGTM
   d="./weight_img_caption/"
   mkdir -p $d
   unzip -q weight_image_captioning.zip -d $d
   rm weight_image_captioning.zip
+  \
+  #for window
+  pip install gdown
+  gdown 15awWEiar47LKqHn9D4A5B_keWuxZlGTM
+  tar -xf weight_image_captioning.zip
+  del weight_image_captioning.zip
   </pre>
-
+  <p>+Step2: Dowload image example</p>
+  <pre>
+  gdown 1PWU1tw53Rv3J-T9i0OQBGFKLbMF4rg9J
+  </pre>
+  <p>+Step3: Detect</p>
+  <pre>
+  python detect.py --source test_predict.jpg --weight weight_img_caption/exp
+  </pre>
+  
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#colab">Try with google colab<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
 <h3>1.For training and detect in Flickrk dataset</h3>
 <a href="https://colab.research.google.com/drive/15hfvnPsYac8ydxG_mmHjZAxW2Z2DOM7o?usp=sharing" rel="nofollow"><img src="https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" style="max-width: 100%;"></a>
