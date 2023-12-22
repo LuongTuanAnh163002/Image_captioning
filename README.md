@@ -92,7 +92,7 @@
   <h3>2.For detect with your model</h3>
   <pre>python detect.py --source file_name.jpg --weight runs/train/exp</pre>
 
-  <h3>2.For detect with my model</h3>
+  <h3>3.For detect with my model</h3>
   <p>+Step1: Dowload my model with script below or you can dowload here</p>
   <a href="https://drive.google.com/file/d/15awWEiar47LKqHn9D4A5B_keWuxZlGTM/view?usp=sharing"><code>weight.zip</code></a>
   <pre>
@@ -121,7 +121,7 @@
 <h2 tabindex="-1" id="user-content-about-the-project" dir="auto"><a class="heading-link" href="#conclusion">Conclusion<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h2>
 
 <p>We build complete image captioning project but we have some disadvantage:</p>
-p>Disadvantage</p>
+<p>Disadvantage</p>
 <ul dir="auto">
 <li>We meet some problem when training with CPU, so that if you running project without no GPU, you meet some error, we will fix this bug in near future</li>
 <li>Only jpg files images are supported during training, in the future we will improve to support more file types images.</li>
