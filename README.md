@@ -124,6 +124,7 @@
 <p>Disadvantage</p>
 <ul dir="auto">
 <li>We meet some problem when training with CPU, so that if you running project without no GPU, you meet some error, we will fix this bug in near future</li>
+<li>Cannot train with multiple GPUs for acceleration</li>
 <li>Only jpg files images are supported during training, in the future we will improve to support more file types images.</li>
 <li>Haven't exported model to onnx or tensorRT yet. In the near future we will update the conversion code for onnx and tensorRT.</li>
 <li>Model only experiment in English language, in the future we will experiment in other language, especials Vienamese language</li>
