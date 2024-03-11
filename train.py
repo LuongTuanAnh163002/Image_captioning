@@ -6,8 +6,9 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import argparse
 import warnings
+import platform
 
-from utils.general import increment_path
+from utils.general import increment_path, colorstr, date_modified
 from utils.datasets import FlickrDataset, get_data_loader
 from models.model import EncoderDecoder
 
@@ -18,6 +19,10 @@ import torchvision.transforms as T
 
 warnings.filterwarnings("ignore") #remove warning
 def train(opt):
+    
+    s = f'Seq2seq attention 🚀 {date_modified()} pytorch {torch.__version__} '
+    print(s.encode().decode('ascii', 'ignore') if platform.system() == 'Windows' else s)
+
     data, epochs, batch_size, learning_rate= opt.data, opt.epochs, opt.batch_size, opt.learning_rate
     num_worker = opt.workers
     embed_size, attention_dim = opt.embed_size, opt.attention_dim
@@ -35,7 +40,7 @@ def train(opt):
     hyp = {"epchs": epochs, "batch_size": batch_size, 
           "lr": learning_rate, "embed_size": embed_size, "attention_dim":attention_dim,
           "encoder_dim": encoder_dim, "decoder_dim": decoder_dim, "num_worker":num_worker}
-    
+    print(colorstr('hyperparameters: ') + ', '.join(f'{k}={v}' for k, v in hyp.items()))
     
     save_yaml = save_dir + "/" + "hyp.yaml"
     with open(save_yaml, 'w') as yaml_file:
@@ -44,7 +49,7 @@ def train(opt):
 
 
     #----------------------Load dataset--------------------------------
-    print("Loading dataset...")
+    print(colorstr('Loading dataset from: ') + str(data_dir))
     transforms = T.Compose([T.Resize(img_size),                     
                             T.RandomCrop(224),                 
                             T.ToTensor(),                               
@@ -59,7 +64,7 @@ def train(opt):
     data_loader = get_data_loader(dataset=dataset,batch_size=batch_size,
                                     num_workers=num_worker,
                                     shuffle=True,)
-    print('Done load dataset')
+    print(colorstr("green", 'Done load dataset'))
     #----------------------Load dataset--------------------------------
 
     #----------------------Load model--------------------------------
@@ -73,7 +78,7 @@ def train(opt):
     
     criterion = nn.CrossEntropyLoss(ignore_index=dataset.vocab.stoi["<PAD>"])
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-    print("Done load model...")
+    print(colorstr("green", "Done load model..."))
     #----------------------Load model--------------------------------
 
     #----------------------Start training--------------------------------
