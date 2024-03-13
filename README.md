@@ -80,7 +80,8 @@
   <p>+Step2: Dowload dataset</p>
   <pre>
   #for ubuntu/linux
-  gdown 1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy
+  pip install gdown
+  gdown "1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy&confirm=t"
   d="./flickr8k/"
   mkdir -p $d
   unzip -q flickr8k.zip -d $d
@@ -88,7 +89,7 @@
   \
   #for window
   pip install gdown
-  gdown 1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy
+  gdown "1P-32Vfy3-s8gaAxbLqTbjLAWlKDGzbTy&confirm=t"
   tar -xf flickr8k.zip
   del flickr8k.zip
   </pre>
@@ -105,6 +106,7 @@
   <a href="https://drive.google.com/file/d/15awWEiar47LKqHn9D4A5B_keWuxZlGTM/view?usp=sharing"><code>weight.zip</code></a>
   <pre>
   #for ubuntu/linux
+  pip install gdown
   gdown 15awWEiar47LKqHn9D4A5B_keWuxZlGTM
   d="./weight_img_caption/"
   mkdir -p $d
@@ -118,7 +120,7 @@
   del weight_image_captioning.zip
   </pre>
   <p>+Step2: Dowload image example</p>
-  <pre>gdown 1PWU1tw53Rv3J-T9i0OQBGFKLbMF4rg9J</pre>
+  <pre>curl -L -o test_predict.jpg 'https://drive.google.com/uc?id=1PWU1tw53Rv3J-T9i0OQBGFKLbMF4rg9J&confirm=t'</pre>
   <p>+Step3: Detect</p>
   <pre>python detect.py --source test_predict.jpg --weight weight_img_caption/exp</pre>
   
