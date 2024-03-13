@@ -68,7 +68,7 @@ def train(opt):
     #----------------------Load dataset--------------------------------
 
     #----------------------Load model--------------------------------
-    print("Loading model...")
+    print(colorstr("Loading model..."))
     vocab_size = len(dataset.vocab)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = EncoderDecoder(embed_size=embed_size, vocab_size = vocab_size,
