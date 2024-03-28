@@ -107,8 +107,7 @@
   <a href="https://drive.google.com/file/d/15awWEiar47LKqHn9D4A5B_keWuxZlGTM/view?usp=sharing"><code>weight.zip</code></a>
   <pre>
   #for ubuntu/linux
-  pip install gdown
-  gdown 15awWEiar47LKqHn9D4A5B_keWuxZlGTM
+  curl -L -o weight_image_captioning.zip https://github.com/LuongTuanAnh163002/Image_captioning/releases/download/v1.0.0/weight_image_captioning.zip
   d="./weight_img_caption/"
   mkdir -p $d
   unzip -q weight_image_captioning.zip -d $d
