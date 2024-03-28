@@ -15,7 +15,7 @@ import torch
 
 warnings.filterwarnings("ignore") #remove warning
 def detect(opt):
-  s = f'Seq2seq attention 🚀 {date_modified()} tensorflow {tf.__version__} '
+  s = f'Seq2seq attention 🚀 {date_modified()} pytorch {torch.__version__} '
   print(colorstr("red", s.encode().decode('ascii', 'ignore') if platform.system() == 'Windows' else s))
   
   source, weight= opt.source, opt.weight
