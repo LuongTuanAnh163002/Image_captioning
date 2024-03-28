@@ -159,5 +159,5 @@ if __name__ == "__main__":
   parser.add_argument('--name', default='exp', help='save to project/name')
   opt = parser.parse_args()
   opt.save_dir = increment_path(Path(opt.project) / opt.name, exist_ok=False)
-  print(opt)
+  print(colorstr(opt))
   train(opt)
