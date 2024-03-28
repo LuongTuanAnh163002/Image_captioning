@@ -4,16 +4,20 @@ from pathlib import Path
 import pickle
 import argparse
 import warnings
+import platform
 
 from utils.general import increment_path
 from models.model import EncoderDecoder
-from utils.general import show_image
+from utils.general import show_image, colorstr, date_modified
 
 import torchvision.transforms as T
 import torch
 
 warnings.filterwarnings("ignore") #remove warning
 def detect(opt):
+  s = f'Seq2seq attention 🚀 {date_modified()} tensorflow {tf.__version__} '
+  print(colorstr("red", s.encode().decode('ascii', 'ignore') if platform.system() == 'Windows' else s))
+  
   source, weight= opt.source, opt.weight
   model_weight = weight + "/" + "best.pth"
   vocab_source = weight + "/" + "vocab.pkl"
@@ -80,4 +84,5 @@ if __name__ == "__main__":
   parser.add_argument('--name', default='exp', help='save to project/name')
   opt = parser.parse_args()
   opt.save_dir = increment_path(Path(opt.project) / opt.name, exist_ok=False)
+  print(colorstr(opt))
   detect(opt)
