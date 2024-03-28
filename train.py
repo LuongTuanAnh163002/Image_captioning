@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore") #remove warning
 def train(opt):
     
     s = f'Seq2seq attention 🚀 {date_modified()} pytorch {torch.__version__} '
-    print(s.encode().decode('ascii', 'ignore') if platform.system() == 'Windows' else s)
+    print(colorstr("red", s.encode().decode('ascii', 'ignore') if platform.system() == 'Windows' else s))
 
     data, epochs, batch_size, learning_rate= opt.data, opt.epochs, opt.batch_size, opt.learning_rate
     num_worker = opt.workers
